@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap');
+
+:root {
+  --wine: #a83250;
+  --dark-wine: #79243c;
+  --pink: #f8e5e9;
+  --cream: #fffaf5;
+  --text: #49383b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  background: #f6e9e9;
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.website {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.page {
+  display: none;
+  flex: 1;
+  min-height: 88vh;
+  padding: 45px 20px 90px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+.content {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+}
+
+.content.wide {
+  max-width: 650px;
+}
+
+.small-flower {
+  color: var(--wine);
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.eyebrow {
+  color: #9b777e;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.main-title {
+  font-family: 'Noto Serif Bengali', serif;
+  font-size: clamp(40px, 10vw, 64px);
+  color: var(--wine);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.name {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 42px;
+  color: #302326;
+  font-weight: 700;
+  margin: 4px 0 12px;
+}
+
+.date {
+  font-size: 19px;
+  color: #876b70;
+}
+
+.from {
+  font-size: 17px;
+  color: #98777e;
+  margin-top: 12px;
+}
+
+.main-btn {
+  margin-top: 30px;
+  border: none;
+  background: var(--wine);
+  color: white;
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px #a8325033;
+  transition: 0.3s;
+}
+
+.main-btn:active {
+  transform: scale(0.95);
+}
+
+.main-btn:hover {
+  background: var(--dark-wine);
+  transform: translateY(-3px);
+}
+
+.big-heart {
+  color: var(--wine);
+  font-size: 65px;
+  margin-bottom: 15px;
+  animation: heartbeat 1.8s infinite;
+}
+
+h2 {
+  font-family: 'Noto Serif Bengali', serif;
+}
+
+.highlight {
+  color: var(--wine);
+  font-size: 27px;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 17px;
+  line-height: 2;
+  color: #705a5f;
+  margin: 18px auto;
+  max-width: 470px;
+}
+
+.section-title {
+  color: var(--wine);
+  font-size: 31px;
+  margin-bottom: 15px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.photo-frame {
+  background: white;
+  padding: 12px 12px 22px;
+  border-radius: 5px;
+  box-shadow: 0 5px 18px #57333b20;
+  min-height: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f0d9dd;
+}
+
+.photo-frame span {
+  font-size: 38px;
+  opacity: 0.65;
+}
+
+.photo-frame p {
+  color: #a17e85;
+  margin-top: 8px;
+}
+
+.letter-paper {
+  background: #fffaf0;
+  padding: 25px 22px;
+  border-radius: 5px;
+  border: 1px solid #ead8c5;
+  box-shadow: 0 5px 20px #57333b15;
+  text-align: left;
+  line-height: 2;
+  font-size: 16px;
+}
+
+.letter-paper p {
+  margin-bottom: 15px;
+}
+
+.signature {
+  text-align: right;
+  color: var(--wine);
+  font-weight: 600;
+}
+
+.notes-grid,
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.note,
+.gift {
+  background: white;
+  border: 1px solid #efd5dc;
+  border-radius: 14px;
+  padding: 25px 10px;
+  font-size: 35px;
+  color: var(--wine);
+  box-shadow: 0 5px 15px #57333b12;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.note span,
+.gift span {
+  display: block;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.note:active,
+.gift:active {
+  transform: scale(0.94);
+}
+
+.message-box {
+  min-height: 70px;
+  padding: 18px;
+  background: #fffaf5;
+  border: 1px dashed #d9aab5;
+  border-radius: 12px;
+  color: var(--dark-wine);
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+
+.gift-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gift {
+  padding: 24px 5px;
+}
+
+.creator {
+  margin-top: 65px;
+  font-size: 12px;
+  color: #a88b90;
+  letter-spacing: 1px;
+}
+
+.navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fffaf5ee;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 16px;
+  border-top: 1px solid #eedde0;
+  z-index: 10;
+}
+
+.navigation button {
+  background: transparent;
+  border: none;
+  color: var(--wine);
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.navigation button:disabled {
+  opacity: 0.3;
+}
+
+#pageCount {
+  font-size: 14px;
+  color: #92747a;
+}
+
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -30px;
+  color: #d98a9c;
+  opacity: 0.3;
+  animation: floatUp 9s linear infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+  20% { opacity: 0.35; }
+  to {
+    transform: translateY(-110vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 35px 17px 85px;
+  }
+
+  .main-title {
+    font-size: 43px;
+  }
+
+  .name {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 27px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .letter-paper {
+    padding: 20px 17px;
+    font-size: 15px;
+  }
+
+  .photo-frame {
+    min-height: 135px;
+  }
+
+  .navigation button {
+    font-size: 13px;
+  }
+}

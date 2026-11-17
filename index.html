@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>রামিসার জন্মদিনের সারপ্রাইজ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hearts" id="hearts"></div>
+
+  <main class="website">
+
+    <!-- PAGE 1 -->
+    <section class="page active" id="page1">
+      <div class="content">
+        <div class="small-flower">✿</div>
+        <p class="eyebrow">একটি বিশেষ দিনের জন্য</p>
+        <h1 class="main-title">শুভ জন্মদিন</h1>
+        <h2 class="name">রামিসা</h2>
+        <p class="date">৮ ডিসেম্বর</p>
+        <p class="from">সুইটির পক্ষ থেকে, অনেক ভালোবাসা ❤️</p>
+        <button class="main-btn" onclick="nextPage()">এগিয়ে যাও →</button>
+      </div>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="page" id="page2">
+      <div class="content">
+        <p class="eyebrow">তোমার জন্য ছোট্ট একটি সারপ্রাইজ</p>
+        <div class="big-heart">♡</div>
+        <h2>কিছু মানুষ দূরে থেকেও</h2>
+        <h2 class="highlight">মনের খুব কাছে থাকে!</h2>
+        <p class="description">
+          দূরত্ব কখনো সত্যিকারের বন্ধুত্বকে কমিয়ে দিতে পারে না।
+          তুমি আমার কাছে তেমনই একজন বিশেষ মানুষ।
+        </p>
+        <button class="main-btn" onclick="nextPage()">আরও দেখো →</button>
+      </div>
+    </section>
+
+    <!-- PAGE 3 -->
+    <section class="page" id="page3">
+      <div class="content wide">
+        <p class="eyebrow">স্মৃতির অ্যালবাম</p>
+        <h2 class="section-title">কিছু সুন্দর মুহূর্ত</h2>
+        <p class="description">ছবিগুলো এখানে পরে যোগ করা হবে।</p>
+
+        <div class="photo-grid">
+          <div class="photo-frame"><span>📷</span><p>ছবি ১</p></div>
+          <div class="photo-frame"><span>📷</span><p>ছবি ২</p></div>
+          <div class="photo-frame"><span>📷</span><p>ছবি ৩</p></div>
+          <div class="photo-frame"><span>📷</span><p>ছবি ৪</p></div>
+        </div>
+
+        <button class="main-btn" onclick="nextPage()">পরের পাতা →</button>
+      </div>
+    </section>
+
+    <!-- PAGE 4 -->
+    <section class="page" id="page4">
+      <div class="content letter">
+        <p class="eyebrow">শুধু তোমার জন্য</p>
+        <h2 class="section-title">প্রিয় রামিসা,</h2>
+        <div class="letter-paper">
+          <p>জানো, কিছু সম্পর্কের কোনো সংজ্ঞা হয় না। কিছু মানুষ জীবনে আসে এবং অজান্তেই অনেকটা জায়গা দখল করে নেয়।</p>
+          <p>তোমার সঙ্গে কাটানো মুহূর্তগুলো হয়তো সবসময় কাছে থেকে উপভোগ করতে পারিনি, কিন্তু দূরত্ব কখনো তোমার গুরুত্ব কমাতে পারেনি।</p>
+          <p>তোমার জীবনের প্রতিটি দিন আনন্দে ভরে উঠুক। তোমার সব স্বপ্ন পূরণ হোক। সবসময় এমন হাসিখুশি থেকো।</p>
+          <p class="signature">অনেক ভালোবাসা,<br>তোমার সুইটি ❤️</p>
+        </div>
+        <button class="main-btn" onclick="nextPage()">আরও একটি সারপ্রাইজ →</button>
+      </div>
+    </section>
+
+    <!-- PAGE 5 -->
+    <section class="page" id="page5">
+      <div class="content wide">
+        <p class="eyebrow">চারটি ছোট্ট বার্তা</p>
+        <h2 class="section-title">তোমার জন্য কিছু কথা</h2>
+
+        <div class="notes-grid">
+          <button class="note" onclick="showNote(0)">💌<span>একটি কথা</span></button>
+          <button class="note" onclick="showNote(1)">🌷<span>একটি শুভকামনা</span></button>
+          <button class="note" onclick="showNote(2)">✨<span>একটি স্বপ্ন</span></button>
+          <button class="note" onclick="showNote(3)">❤️<span>একটি অনুভূতি</span></button>
+        </div>
+
+        <div class="message-box" id="noteMessage">একটি কার্ডে চাপ দিয়ে বার্তাটি পড়ো।</div>
+        <button class="main-btn" onclick="nextPage()">পরের পাতা →</button>
+      </div>
+    </section>
+
+    <!-- PAGE 6 -->
+    <section class="page" id="page6">
+      <div class="content wide">
+        <p class="eyebrow">তোমার জন্য উপহার</p>
+        <h2 class="section-title">বেছে নাও তোমার উপহার</h2>
+        <p class="description">প্রতিটি উপহারের ভেতরে রয়েছে একটি ছোট্ট বার্তা।</p>
+
+        <div class="gift-grid">
+          <button class="gift" onclick="showGift(0)">🎁<span>উপহার ১</span></button>
+          <button class="gift" onclick="showGift(1)">🎀<span>উপহার ২</span></button>
+          <button class="gift" onclick="showGift(2)">💝<span>উপহার ৩</span></button>
+        </div>
+
+        <div class="message-box" id="giftMessage">একটি উপহার খুলে দেখো!</div>
+        <button class="main-btn" onclick="nextPage()">শেষ সারপ্রাইজ →</button>
+      </div>
+    </section>
+
+    <!-- PAGE 7 -->
+    <section class="page" id="page7">
+      <div class="content">
+        <div class="big-heart">♥</div>
+        <p class="eyebrow">আজকের দিনটি শুধু তোমার</p>
+        <h1 class="main-title">শুভ জন্মদিন</h1>
+        <h2 class="name">প্রিয় রামিসা</h2>
+
+        <p class="description">
+          তোমার জীবন ভরে উঠুক অফুরন্ত আনন্দ,
+          ভালোবাসা আর সুন্দর সব মুহূর্তে।
+          প্রতিটি নতুন সকাল নিয়ে আসুক নতুন আশা।
+        </p>
+
+        <h2 class="highlight">অনেক অনেক ভালোবাসা! ❤️</h2>
+        <p class="from">ইতি, তোমার সুইটি</p>
+        <p class="creator">Designed & Made by Tusar</p>
+      </div>
+    </section>
+
+    <div class="navigation">
+      <button id="backBtn" onclick="prevPage()" disabled>← আগের পাতা</button>
+      <span id="pageCount">১ / ৭</span>
+      <button id="nextBtn" onclick="nextPage()">পরের পাতা →</button>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
